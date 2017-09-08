@@ -1,7 +1,7 @@
 provider "aws" {
-  access_key = "AKIAJ7KIE72ARV5SSYPA"
-  secret_key = "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"
-  region = "us-east-1"
+  access_key = "${var.aws_access_key}"
+  secret_key = "${var.aws_secret_key}"
+  region = "${var.aws_region}"
 }
 
 resource "aws_emr_cluster" "emr-test-cluster" {
